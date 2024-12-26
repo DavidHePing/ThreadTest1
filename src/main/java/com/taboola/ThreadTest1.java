@@ -30,7 +30,7 @@ public class ThreadTest1 {
             e.printStackTrace();
         }
 
-        System.out.println("Final Counter Value: " + example.getCounter());
+        System.out.println("ThreadTest1 with sync, Final Counter Value: " + example.getCounter());
     }
 
     public static void testMethodNoSync(){
@@ -60,6 +60,6 @@ public class ThreadTest1 {
             e.printStackTrace();
         }
 
-        System.out.println("Final Counter Value: " + example.getCounterNoSync());
+        System.out.println("ThreadTest1 without sync, Final Counter Value: " + example.getCounterNoSync());
     }
 }
