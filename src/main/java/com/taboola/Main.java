@@ -6,12 +6,12 @@ public class Main {
 
 
     public static void main(String[] args) {
-
         //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
         // to see how IntelliJ IDEA suggests fixing it.
-        System.out.println("Hello and welcome!");
 
+        System.out.printf("ThreadTest1 with sync: ");
         ThreadTest1.testMethodSync();
+        System.out.printf("ThreadTest1 without sync: ");
         ThreadTest1.testMethodNoSync();
     }
 }
