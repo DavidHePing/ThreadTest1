@@ -11,5 +11,6 @@ public class Main {
 
         ThreadTest1.testMethodSync();
         ThreadTest1.testMethodNoSync();
+        VolatileTest1.testMethodSync();
     }
 }
