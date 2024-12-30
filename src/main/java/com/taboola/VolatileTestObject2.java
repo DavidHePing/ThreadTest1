@@ -1,15 +1,23 @@
 package com.taboola;
 
 public class VolatileTestObject2 {
-    private volatile boolean flag = true;
+    private volatile boolean isRunning = true;
 
-    private final Object lock = new Object();
-
-    public void changeFlag() {
-        flag = !flag;
+    public void startTask() {
+        new Thread(() -> {
+            while (isRunning) {
+                System.out.println("Task is running...");
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    Thread.currentThread().interrupt();
+                }
+            }
+            System.out.println("Task stopped.");
+        }).start();
     }
 
-    public boolean getFlag() {
-        return flag;
+    public void stopTask() {
+        isRunning = false;
     }
 }
